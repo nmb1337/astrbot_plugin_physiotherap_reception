@@ -1,0 +1,44 @@
+{
+  "alert_qqs": {
+    "description": "需要被提醒的QQ号码列表",
+    "type": "list",
+    "default": [],
+    "hint": "输入要接收警告的QQ号，使用英文逗号分隔（如：123456789,987654321）"
+  },
+  "keywords": {
+    "description": "精确匹配关键词",
+    "type": "list",
+    "default": ["敏感词1", "敏感词2"],
+    "hint": "输入需要监控的精确关键词，每个关键词一行"
+  },
+  "fuzzy_keywords": {
+    "description": "模糊匹配关键词（包含部分字符串即可触发）",
+    "type": "list",
+    "default": [],
+    "hint": "输入需要监控的模糊关键词，当消息包含这些字符串时会触发警告"
+  },
+  "enabled": {
+    "description": "是否启用关键词监控",
+    "type": "bool",
+    "default": true,
+    "hint": "启用或禁用此插件的关键词检测功能"
+  },
+  "stop_chat": {
+    "description": "是否停止机器人回复",
+    "type": "bool",
+    "default": true,
+    "hint": "检测到关键词时是否停止astrbot的正常聊天回复"
+  },
+  "stop_duration_seconds": {
+    "description": "停止聊天时长（秒）",
+    "type": "int",
+    "default": 300,
+    "hint": "当检测到关键词停止机器人聊天的时间，单位为秒"
+  },
+  "alert_message": {
+    "description": "警告消息模板",
+    "type": "text",
+    "default": "【检测到关键词警告】\n发送者: {sender}\nQQ: {sender_id}\n消息内容: {message}\n检测词: {keyword}",
+    "hint": "支持的变量：{sender}(昵称), {sender_id}(QQ号), {message}(消息), {keyword}(触发的关键词)"
+  }
+}

@@ -1,0 +1,6 @@
+name: astrbot_plugin_keyword_alert
+display_name: 关键词告警插件
+desc: 监听消息中的关键词或模糊关键词，检测到时立即向指定QQ发送警告消息并停止机器人聊天
+version: v1.0.0
+author: AstrBot Team
+repo: https://github.com/astrbot/plugins
